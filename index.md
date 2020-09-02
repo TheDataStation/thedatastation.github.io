@@ -1,4 +1,4 @@
-## Next Generation Data Lakes
+## Combining Data, Compute, and Market Forces
 
 Data Stations are a new data architecture that we are designing to tackle some of the most challenging data problems that we face today: access to sensitive data; data discovery and integration; and governance and compliance. Data Stations depart from modern data lakes in that both data and derived data products, such as machine learning models, are sealed and cannot be directly seen, accessed, or downloaded by anyone. Data Stations do not deliver data to users; instead, users bring questions to data. This inversion of the usual relationship between data and compute mitigates many of the security risks that are otherwise associated with sharing and working with sensitive data.
 
