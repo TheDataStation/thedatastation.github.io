@@ -7,10 +7,7 @@ Data Stations are designed following the principle that many data problems requi
 
 ### Resources
 
-A writeup laying out the vision for Data Stations can be found on [ArXiv](https://arxiv.org/abs/2009.00035)
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+A writeup laying out the vision for Data Stations can be found on [ArXiv](https://arxiv.org/abs/2009.00035).
 
 ### Team
 
