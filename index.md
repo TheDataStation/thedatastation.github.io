@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+## Next Generation Data Lakes
 
-You can use the [editor on GitHub](https://github.com/TheDataStation/thedatastation.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Data Stations are a new data architecture that we are designing to tackle some of the most challenging data problems that we face today: access to sensitive data; data discovery and integration; and governance and compliance. Data Stations depart from modern data lakes in that both data and derived data products, such as machine learning models, are sealed and cannot be directly seen, accessed, or downloaded by anyone. Data Stations do not deliver data to users; instead, users bring questions to data. This inversion of the usual relationship between data and compute mitigates many of the security risks that are otherwise associated with sharing and working with sensitive data.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Data Stations are designed following the principle that many data problems require human involvement, and that incentives are the key to obtaining such involvement. To that end, Data Stations implement market designs to create, manage, and coordinate the use of incentives. We explain the motivation for this new kind of platform and its design.
 
-### Markdown
+
+### Resources
+
+A writeup laying out the vision for Data Stations can be found on [ArXiv](https://arxiv.org/abs/2009.00035)
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Team
 
-- Bulleted
-- List
+TODO...
 
-1. Numbered
-2. List
+### Collaborators
 
-**Bold** and _Italic_ and `Code` text
+TODO...
 
-[Link](url) and ![Image](src)
-```
+### Funding
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/TheDataStation/thedatastation.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+TODO...
