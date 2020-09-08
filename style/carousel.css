@@ -1,6 +1,33 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 
+
+************************
+  People
+************************/
+.member {
+    margin: 20px 0;
+}
+.member img {
+    margin-bottom: 10px;
+}
+.member .name {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.member .position {
+    font-weight: 500;
+}
+@media (min-width: 768px) {
+    .member img {
+        width: 150px;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+}
+
+
 .pubs-divider {
     margin: 1rem 0;
 }
