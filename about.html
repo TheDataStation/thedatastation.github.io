@@ -1,0 +1,80 @@
+---
+layout: default
+title: News
+---
+
+<div class="container support" style="margin-top: 10px;">
+  
+  <div class="row" style="padding-top: 20px">
+    <div class="col-lg-12">
+      <h2>The Data Station</h2>
+       <p> Whenever data and models are shared, transformation ensues.
+Breaking down data silos unleashes value that makes companies
+more competitive. Pooling knowledge, such as when hospitals form
+coalitions, accelerates discovery. Entire disciplines change when
+researchers share benchmarks and models. However, three
+barriers prevent effective sharing: easy access to sensitive data, data
+discovery and integration, and data governance and compliance are
+all challenges with both technical and human components.</p>
+      		
+			<h3>Challenges</h3>
+			
+			<h5>Discovery and Integration</h5>
+			<p>Data lakes ease data access by collecting unrestricted datasets in a central repository where
+			they may be accessed and downloaded by analysts. However, large
+			volumes of data mean analysts spend more time in finding (discovery) and combining (integration) datasets than in their analysis.</p>
+
+			<h5>Access to Sensitive Data</h5>
+			<p>Organizations are wary of sharing data
+			because they fear information leakage [13]. Simple anonymization
+			techniques do not suffice [22, 30]. These disincentives block data
+			sharing and stymie innovation.
+			</p>
+
+			<h5>Data Governance and Compliance</h5> 
+			<p>Analysts routinely download datasets from databases to produce machine learning
+			models, reports, and other derived data products. The consequence
+			is a governance nightmare for those who want to control access
+			to sensitive information, need to comply with regulations such as
+			GDPR and CCPA, or want to ensure ethical use of data.
+			To tackle these challenges, a radically new data architecture is
+			needed to address both the technical and the human problem. Such
+			an architecture must change how people access, and use data</p>
+
+			<h3>Enter the Data Station</h3>
+			<p>In the Data Station architecture, both
+			data and derived data products—such as ML models, query results,
+			and reports—are sealed and cannot be directly seen, accessed, or
+			downloaded by anyone. The key idea is that instead of delivering
+			data to users, users bring questions to data. For example, instead of
+			downloading a dataset to train a ML model, a user may tell the Data
+			Station what model they need and the Station identifies a suitable
+			data + model combination, trains the model on the data, and makes
+			the trained model available for inference. This inversion of compute
+			and data mitigates many security risks of sharing sensitive data.
+			</p>
+
+			<p>
+			Centralizing data and computation permits fine-grained yet scalable 
+			data access: users see results of their tasks only after they have
+			been given permission. In this model, data lifecycles and provenance 
+			are known, which permits straightforward implementation
+			of data governance policies. For example, it is possible to prohibit
+			the use of non-interpretable ML models; to control the attributes
+			included in training data to avoid propagating biased and unfair
+			models; and to limit the data used for deriving data products to
+			avoid leaking sensitive data. In general, it is possible to control
+			what and how derived data products are produced and used.
+			</p>
+			<p>
+			Centralizing data and computation has another benefit: 
+			the Station sees all datasets, all models, and all compute requests. This
+			information lays the foundation for the design of data markets.
+			Data markets incentivize humans to share data and concentrate
+			their effort where it matters most: assisting with discovery and
+			integration tasks. Market forces can be used to recruit humans
+			to clean datasets, to indicate how to join datasets, or to annotate
+			datasets with tags and other documentation.</p>
+
+  </div>
+</div>
