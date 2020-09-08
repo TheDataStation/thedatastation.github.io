@@ -8,16 +8,20 @@
 .member {
     margin: 20px 0;
 }
+
 .member img {
     margin-bottom: 10px;
 }
+
 .member .name {
     font-size: 1.2em;
     font-weight: 500;
 }
+
 .member .position {
     font-weight: 500;
 }
+
 @media (min-width: 768px) {
     .member img {
         width: 150px;
@@ -26,7 +30,6 @@
         margin-bottom: 0;
     }
 }
-
 
 .pubs-divider {
     margin: 1rem 0;
@@ -51,6 +54,7 @@ body {
 .carousel {
   margin-bottom: 4rem;
 }
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   position: relative; 
@@ -63,7 +67,6 @@ body {
   height: 32rem;
   background-color: #01192D;
 }
-
 
 .carousel-item > img {
   position: absolute;
