@@ -1,0 +1,172 @@
+---
+layout: default
+title: Publications and Presentations
+---
+
+<script src="js/parser.js"></script>
+<!--<script src="js/jquery.min.js"></script>-->
+
+<script>
+
+function get_format(data, field, pre, post){
+    if (field in data && data[field] != ""){
+        return pre + data[field] + post;
+    }
+    return "";
+}
+
+function get_bib(data){
+    var formated = "@" + data['EntryType'] + "{" + data['EntryKey'] + ",\n";
+    $.each( data["Fields"], function( key, value ) {
+        formated += key + " = {" + value + "},\n";
+    });
+    formated += "}"
+    return formated;
+}
+
+function format_bib(data){
+    formated = $("<div>", {"class" : "ref-text"}); 
+    var authors = data["Fields"]["author"].split("and");
+    var author_string = "";
+    for (var i = 0, len = authors.length; i < len; i++) {
+	author_string += authors[i].trim();
+	if (i < authors.length - 2){
+		author_string += ', ';
+	} else if (i == authors.length - 2){
+		author_string += ' and ';
+	}
+    } 
+    if (author_string.endsWith(".")){
+      author_string = author_string.substring(0, author_string.length - 1);
+    }
+    formated.append($("<span>", {"text" : author_string + ". ", "class" : "authors"}));
+    
+    var title = $("<span>", {"text" : "\"" + data["Fields"]["title"] + ".\" "})
+    if ("url" in data["Fields"]){
+        title = $("<a>", {"text" : "\"" + data["Fields"]["title"] + ".\" ", "href" : data["Fields"]["url"]})
+    }
+
+    formated.append(title);
+    
+    var journal_conference = ""
+    if (data["EntryType"] == "article"){
+        journal_conference += data["Fields"]["journal"];
+    } else if (data["EntryType"] == "inproceedings"){
+        journal_conference += data["Fields"]["booktitle"] ;
+    } else if (data["EntryType"] == "incollection"){
+        journal_conference += data["Fields"]["booktitle"];
+    }
+    
+    journal_conference += get_format(data["Fields"], "volume", ". ", "");
+    journal_conference += get_format(data["Fields"], "number", "(", ")");
+    journal_conference += get_format(data["Fields"], "pages", ". pp ", "");
+    journal_conference += get_format(data["Fields"], "year", ". ", ".");
+
+    formated.append($("<span>", {"text" : journal_conference}));
+    return formated; 
+}
+$( document ).ready(function() {
+
+   var display_bib = function(data) {
+       //console.log(data)
+       var paper = $("<div>", {"id" : data['EntryKey'], "class": "ref-holder"});
+       var ref_text =  format_bib(data);
+       var download_links = $("<div>", {"class": "ref-download"});
+       
+       if ('note' in data['Fields']){
+           var pdf_img = $("<img>", {"src" : 'images/pdf.png', "class": "ref-image"});
+           var pdf_link = $("<a>", {"href": "publications/" + data["Fields"]["note"]});
+           pdf_link.append(pdf_img);
+           download_links.append(pdf_link);
+       }
+       //if (True){
+           var bib_img = $("<img>", {"src" : 'images/bibtex.png', "class": "ref-image"})
+           var bib_link = $("<a>", {'href': 'data:text/plain;charset=utf-8,' + encodeURIComponent(get_bib(data)), 'download' :data['EntryKey'] + '.bib'});
+           bib_link.append(bib_img);
+           download_links.append(bib_link);
+       //}
+       paper.append(ref_text).append(download_links);
+       $("#paper-div").append(paper)
+   }
+
+   $.get( "publications/publications.bib", function( data ) {
+       var parser = BibtexParser(display_bib);
+       parser.parse(data);
+   });
+
+});
+
+
+
+</script>
+
+<style>
+.ref-holder {
+  display: inline-block;
+  width: 100%;
+}
+.ref-text {
+  width: 93%;
+  float: left;
+}
+.ref-download {
+  float: right;
+}
+.ref-image{
+  width:30px;
+  padding-left: 5px;
+}
+</style>
+
+
+<div class="container support" style="margin-top: 10px;">
+  
+  <!--
+	<div class="row" style="padding-top: 20px">
+    <div class="col-lg-12">
+      <h2>Publications</h2>
+    </div>
+  </div>
+  -->
+	
+  <div class="row" style="padding-top: 20px">
+    <div class="col-lg-12">
+      <h3>Citing the Data Station</h3>
+      <p>Please cite the following publication in any published research:</p>
+	    
+	<div id="citation" class="ref-holder"><div class="ref-text"><span class="authors">
+	Raul Castro Fernandez, Kyle Chard, Ben Blaiszik, Sanjay Krishnan, Aaron Elmore, Ziad Obermeyer, Josh Risley, Sendhil Mullainathan, Michael Franklin, Ian Foster.</span>
+	<a href="https://arxiv.org/abs/2009.00035">"The Data Station: Combining Data, Compute, and Market Forces" </a>
+		<span>2020. 
+		<a href="https://arxiv.org/abs/2009.00035">https://arxiv.org/abs/2009.00035</a></span>
+		</div><div class="ref-download"><a href="publications/chard20funcx.pdf">
+		<img src="images/pdf.png" class="ref-image"></a>
+		<a href="data:text/plain;charset=utf-8,SOMETHING" download="chard20funcx.bib"><img src="images/bibtex.png" class="ref-image"></a></div></div>	
+    </div>
+  </div>
+
+	<hr class="pubs-divider">
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h3>Recent Presentations</h3>
+			<div class="media col-sm-12">
+				<div class="media-body">
+				</div>
+			</div>
+		</div>	
+	</div>
+
+  <hr class="pubs-divider">
+
+	<div class="row">
+		<div class="col-lg-12">	
+			<h3>All Papers</h3>
+			<div class="media col-sm-12">
+				<div class="media-body">
+					<div id="paper-div"></div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
