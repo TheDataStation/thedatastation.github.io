@@ -44,7 +44,7 @@ body {
 }
 
 .bg-datastation {
-  background-color: #FFB155 !important;
+  background-color: #CCCCC1 !important;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -77,8 +77,8 @@ body {
 }
 
 .datastation-banner {
-  color: white;
-  background-color: #FFB155;
+  color: #002440;
+  background-color: #CCCCC1;
   margin-bottom: 80px;
 }
 .datastation-banner-img {
