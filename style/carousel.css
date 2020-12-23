@@ -53,6 +53,10 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
+.navbar-light .navbar-nav .nav-link {
+    color: #002440 !important;
+}
+
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
