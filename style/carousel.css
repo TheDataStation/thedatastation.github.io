@@ -48,20 +48,8 @@ body {
     background-color: #a8a8a8 !important;
 }
 
-.bg-datastation {
-  background-color: #a8a8a8 !important;
-}
-
-.navbar-dark .navbar-nav .nav-link{
-  color: #002440 !important;
-}
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
-.navbar-light .navbar-nav .nav-link {
-    color: #002440 !important;
-}
 
 /* Carousel base class */
 .carousel {
