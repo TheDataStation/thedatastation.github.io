@@ -43,6 +43,11 @@ body {
   color: #5a5a5a;
 }
 
+.navbar-datastation {
+    color: #002440 !important;
+    background-color: #a8a8a8 !important;
+}
+
 .bg-datastation {
   background-color: #a8a8a8 !important;
 }
