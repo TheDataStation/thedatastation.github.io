@@ -44,7 +44,7 @@ body {
 }
 
 .bg-datastation {
-  background-color: #CCCCC1 !important;
+  background-color: #a8a8a8 !important;
 }
 
 .navbar-dark .navbar-nav .nav-link
@@ -81,7 +81,7 @@ body {
 
 .datastation-banner {
   color: #002440;
-  background-color: #CCCCC1;
+  background-color: #a8a8a8;
   margin-bottom: 80px;
 }
 .datastation-banner-img {
