@@ -44,8 +44,11 @@ body {
 }
 
 .navbar-datastation {
-    color: #002440 !important;
     background-color: #a8a8a8 !important;
+}
+
+.navbar-datastation .navbar-nav .nav-link {
+    color: #800000 !important;
 }
 
 /* CUSTOMIZE THE CAROUSEL
